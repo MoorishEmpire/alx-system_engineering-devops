@@ -1,5 +1,5 @@
 #!/bin/bash
 for entry in *; do
-    mime_type=$(file --mime-type -b "$entry")
+    mime_type=$(file -b --mime-type "$entry")
     echo "$entry: $mime_type"
 done
