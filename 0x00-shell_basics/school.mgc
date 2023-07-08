@@ -1,2 +1,5 @@
 #!/bin/bash
-0 string SCHOOL School data !:mime School
+for entry in *; do
+    mime_type=$(file --mime-type -b "$entry")
+    echo "$entry: $mime_type"
+done
