@@ -1,2 +1,3 @@
 #!/bin/bash
-find . -type d -mindepth 1 -not -name "." -printf "%h\n" | sort -u | wc -l 
+find . -type d -not -name '.' | wc -l
+
