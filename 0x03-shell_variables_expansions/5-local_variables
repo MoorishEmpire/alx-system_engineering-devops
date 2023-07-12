@@ -1,2 +1,2 @@
 #!/bin/bash
-env | sort ; declare -F | awk '{print $3}' | sort
+(env; declare -F) | sort
