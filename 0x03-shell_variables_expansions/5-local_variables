@@ -1,2 +1,2 @@
 #!/bin/bash
-declare -p | cut -d " " -f 3- | grep -vE 'BASH_FUNC.*\(\)' | sort
+(set -o posix ; set) | grep -vE 'BASH_FUNC.*\(\)' | sort
