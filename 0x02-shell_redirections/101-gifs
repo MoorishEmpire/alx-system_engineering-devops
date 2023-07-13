@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname "*.gif" -exec basename {} .gif \; | sort -f
+find . -type f -name "*.gif" | awk -F. '{print $2}' | awk -F/ '{print $NF}' | sort -f
