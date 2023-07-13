@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$((0x$(echo -n "${WATER}" | tr -cd '[:alnum:]')) + 0x$(echo -n "${STIR}" | tr -cd '[:alnum:]'))" | tr '0123456789abcdef' 'stirwaterbestchol'
+printf "%s" "$((${WATER//[^a-z]} + ${STIR//[^a-z]}))" | tr "0123456789abcdef" "stirwaterbestchol"
