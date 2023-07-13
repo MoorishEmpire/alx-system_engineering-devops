@@ -1,0 +1,2 @@
+#!/bin/bash
+counter=0; while read -r line; do ((counter++)); if ((counter % 2 == 1)); then echo "$line"; fi; done
