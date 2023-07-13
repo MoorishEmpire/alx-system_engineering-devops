@@ -1,3 +1,2 @@
 #!/bin/bash
-echo "obase=bestchol; ibase=water; $WATER + ibase=stir; $STIR" | bc
-
+echo "$((0x$(echo -n "${WATER}" | tr -cd '[:alnum:]')) + 0x$(echo -n "${STIR}" | tr -cd '[:alnum:]'))" | tr '0123456789abcdef' 'stirwaterbestchol'
