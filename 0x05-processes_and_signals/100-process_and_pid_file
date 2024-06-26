@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# Creating the PID file
+echo $$ > /var/run/myscript.pid
+
+# Function to handle signals
+handle_signal()
+{
+	case "$1" in
+		SIGTERM)
+			echo "I hate the kill command";;
+		SIGINT)
+			echo "Y U no love me?!";;
+		SIGQUIT)
+			echo "Removing PID file and teminating..."
+			rm -f /var/run/myscript.pid
+			exit 0;;
+	esac
+}
+
+# Trap signals
+trap 'handle_signal SIGTERM' SIGTERM
+trap 'handle_signal SIGINT' SIGINT
+trap 'handle_signal SIGQUIT' SIGQUIT
+
+# Main loop
+while true;
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
+
