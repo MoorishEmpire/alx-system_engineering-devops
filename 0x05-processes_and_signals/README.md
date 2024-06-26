@@ -4,4 +4,6 @@ This project contains scripts related to process management and signals in a Uni
 
 ### 0-what-is-my-pid
 This script displays its own PID.
+### 1-list_your_processes
+This script displays a list of currently running processes.
 
