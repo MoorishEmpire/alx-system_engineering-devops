@@ -2,7 +2,4 @@
 # This script will stops 4-to_infinity_and_beyond process.
 
 #Find the PID of the running 4-to_infinity_and_beyond process and send SIGKILL to it
-pkill -f -SIGKILL 4-to_infinity_and_beyond
-
-echo "Process terminated."
-
+pkill -f 4-to_infinity_and_beyond
