@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # This script displays the PID, along with the process name, of processes whose name contain the word bash.
 
-#ps -eo pid,comm | grep -w '[b]ash'
-#ps -eo pid,comm | grep bash | grep -v '^bash$'
 ps -eo pid,comm | grep -v '^bash$' | grep bash
