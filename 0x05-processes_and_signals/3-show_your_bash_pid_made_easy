@@ -2,5 +2,5 @@
 # This script displays the PID, along with the process name, of processes whose name contain the word bash.
 
 #ps -Ao pid,comm | awk '/[b]ash/' 
-ps -eo pid,comm | awk '/[b]ash/ {printf("%d\tbash\n", $1)}'
-
+#ps -eo pid,comm | awk '/[b]ash/ {printf("%d\tbash\n", $1)}'
+ps aux --forest | grep 'bash' | awk '{printf("%d\tbash\n", $2)}'
