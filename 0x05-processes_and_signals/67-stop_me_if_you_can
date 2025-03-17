@@ -3,14 +3,11 @@
 
 
 #Find the PID of the 4-to_infinity_and_beyond process
-pid=$(pgrep -f "7-highlander")
+pid=$(pgrep -f "100-process_and_pid_file")
 
 #Kill the process
 if [ -n "$pid" ];
 then
-	kill -SIGTERM "$pid"
-	echo "Process 7-hignlander with PID $pid has bee sent terminated."
-else
-	echo "7-highlander process not found."
+	kill -9 "$pid"
 fi
 

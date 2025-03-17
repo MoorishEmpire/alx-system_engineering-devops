@@ -2,7 +2,7 @@
 # This script will displays To infinity and beyond indefinitely and sleep 2 between each iteration but when receiving a SIGTERM signal will displays I am invincible.
 
 # Trap the SIGTERM signal
-trap 'echo "I am invincible!!!"' SIGTERM
+trap 'echo "I am invincible!!!"' SIGTERM 
 
 #Loop indefinitely
 while true;
