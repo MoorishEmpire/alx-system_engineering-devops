@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script displays a list of currently running processes in a user-oriented with a processes hierarchy.
 
-ps aux
+ps aux --forest
