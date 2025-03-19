@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script that manages manage_my_process. Tankin three arguments which are start, stop and restart.
+#Script that manages manage_my_process. Tanking three arguments which are start, stop and restart.
 
 case "${1:-''}" in
 	'start')
@@ -8,12 +8,12 @@ case "${1:-''}" in
 		echo "manage_my_process started"
 		;;
 	'stop')
-		kill -9 $(cat /var/run/my_process.pid)
+		kill -9 "$(cat /var/run/my_process.pid)"
 		rm /var/run/my_process.pid
 		echo "manage_my_process stopped"
 		;;
 	'restart')
-		kill -9 $(cat /var/run/my_process.pid)
+		kill -9 "$(cat /var/run/my_process.pid)"
 		rm /var/run/my_process.pid
 		./manage_my_process &
 		echo $! > /var/run/my_process.pid
