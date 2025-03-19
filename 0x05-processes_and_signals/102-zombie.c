@@ -17,7 +17,7 @@ int	infinite_while(void)
 }
 
 /**
- * main - Entry point of the program.  
+ * main - Entry point of the program.
  *
  * Return: Always 0.
  */
@@ -28,14 +28,13 @@ int main(void)
 	i = 0;
 	while (i < 5)
 	{
-		int pid = fork(); 
+		int pid = fork();
 
 		if (pid < 0)
 		{
 			write(2, "Forking has failed\n", 20);
 			exit(1);
 		}
-	
 		if (pid == 0)
 			exit(0);
 		else
@@ -43,8 +42,7 @@ int main(void)
 			printf("Zombie process created, PID: %d\n", pid);
 			i++;
 		}
-
-	} 
+	}
 	infinite_while();
 	return (0);
 }
