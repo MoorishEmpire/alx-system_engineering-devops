@@ -40,7 +40,7 @@ int main(void)
 			exit(0);
 		else
 		{
-			printf("Zombie process created, PID: %d\n", getpid());
+			printf("Zombie process created, PID: %d\n", pid);
 			i++;
 		}
 
