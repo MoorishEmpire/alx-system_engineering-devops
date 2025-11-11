@@ -3,7 +3,7 @@
 
 #displays a message if no argument is passed
 
-if [ "$#" -lt 2 ]
+if [ "$#" -eq 0 ]
 then
 	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 else
