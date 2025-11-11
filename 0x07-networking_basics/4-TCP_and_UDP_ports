@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
+#script that displays listenings ports
 
 netstat -lnp
